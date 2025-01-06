@@ -1,0 +1,10 @@
+azure-search>=1.0.0b2
+azure-search-documents==11.6.0b7
+python-dotenv>=1.0.1
+azure-ai-documentintelligence==1.0.0b4
+pypdf2>=3.0.1
+openai>=1.57.0
+azure-ai-formrecognizer>=3.3.3
+tqdm>=4.67.1
+pycryptodome>=3.21.0
+ipykernel>=6.29.5
