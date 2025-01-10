@@ -17,7 +17,7 @@ export default function DocSearch() {
       }}
       padding="md"
     >
-      <AppShell.Header bg="rgb(18 58 94)">
+      <AppShell.Header bg="dark">
         <Burger
           opened={opened}
           onClick={toggle}
@@ -25,6 +25,7 @@ export default function DocSearch() {
           size="sm"
         />
         <Group align="center" gap={0}>
+          <Avatar size="lg" radius="lg" src="logo.png"/>
           <span style={{ color: 'white' }}>Document Search</span>
         </Group>
       </AppShell.Header>

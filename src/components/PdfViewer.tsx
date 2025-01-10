@@ -1,7 +1,7 @@
 import { pdfjs, Document, Page } from "react-pdf";
 import { Group, Stack, Button } from '@mantine/core';
 import { useContext, useState } from "react";
-import { StateContext } from "./State";
+import { StateContext } from "../State";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 

@@ -23,7 +23,6 @@ export default function Filters() {
 
   return (
     <Stack
-      h={300}
       bg="var(--mantine-color-body)"
       align="stretch"
       justify="center"

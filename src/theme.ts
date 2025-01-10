@@ -1,78 +1,97 @@
-import { Card, Container, createTheme, Paper, rem, Select } from "@mantine/core";
+import { MantineThemeOverride } from "@mantine/core";
 
-const CONTAINER_SIZES: Record<string, string> = {
-  xxs: rem("200px"),
-  xs: rem("300px"),
-  sm: rem("400px"),
-  md: rem("500px"),
-  lg: rem("600px"),
-  xl: rem("1400px"),
-  xxl: rem("1600px"),
-};
+const theme: MantineThemeOverride = 
+{
+    "scale": 1,
+    "fontSmoothing": true,
+    "focusRing": "auto",
+    "white": "#ffffff",
+    "black": "#24292f",
+    "colors": {
+      "dark": [
+        "#c9d1d9",
+        "#b1bac4",
+        "#8b949e",
+        "#6e7681",
+        "#484f58",
+        "#30363d",
+        "#21262d",
+        "#161b22",
+        "#0d1117",
+        "#010409"
+      ],
+      "gray": [
+        "#f6f8fa",
+        "#eaeef2",
+        "#d0d7de",
+        "#afb8c1",
+        "#8c959f",
+        "#6e7781",
+        "#57606a",
+        "#424a53",
+        "#32383f",
+        "#24292f"
+      ],
+      "blue": [
+        "#ddf4ff",
+        "#b6e3ff",
+        "#80ccff",
+        "#54aeff",
+        "#218bff",
+        "#0969da",
+        "#0550ae",
+        "#033d8b",
+        "#0a3069",
+        "#002155"
+      ],
+      "green": [
+        "#dafbe1",
+        "#aceebb",
+        "#6fdd8b",
+        "#4ac26b",
+        "#2da44e",
+        "#1a7f37",
+        "#116329",
+        "#044f1e",
+        "#003d16",
+        "#002d11"
+      ],
+      "yellow": [
+        "#fff8c5",
+        "#fae17d",
+        "#eac54f",
+        "#d4a72c",
+        "#bf8700",
+        "#9a6700",
+        "#7d4e00",
+        "#633c01",
+        "#4d2d00",
+        "#3b2300"
+      ],
+      "orange": [
+        "#fff1e5",
+        "#ffd8b5",
+        "#ffb77c",
+        "#fb8f44",
+        "#e16f24",
+        "#bc4c00",
+        "#953800",
+        "#762c00",
+        "#5c2200",
+        "#471700"
+      ]
+    },
+    "primaryShade": 6,
+    "primaryColor": "blue",
+    "autoContrast": true,
+    "luminanceThreshold": 0.3,
+    "fontFamily": "'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Noto Sans', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+    "fontFamilyMonospace": "'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace",
+    "headings": {
+      "fontFamily": "'-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Noto Sans', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+      "fontWeight": "600"
+    },
+    "defaultRadius": "md"
+  }
 
-export const theme = createTheme({
-  /** Put your mantine theme override here */
-  fontFamily: "'Frutiger47LightCn','Microsoft Jhenghei','MS PGothic'",
-  fontSizes: {
-    xs: rem("12px"),
-    sm: rem("14px"),
-    md: rem("16px"),
-    lg: rem("18px"),
-    xl: rem("20px"),
-    "2xl": rem("24px"),
-    "3xl": rem("30px"),
-    "4xl": rem("36px"),
-    "5xl": rem("48px"),
-  },
-  spacing: {
-    "3xs": rem("4px"),
-    "2xs": rem("8px"),
-    xs: rem("10px"),
-    sm: rem("12px"),
-    md: rem("16px"),
-    lg: rem("20px"),
-    xl: rem("24px"),
-    "2xl": rem("28px"),
-    "3xl": rem("32px"),
-  },
-  primaryColor: "blue",
-  components: {
-    /** Put your mantine component override here */
-    Container: Container.extend({
-      vars: (_, { size, fluid }) => ({
-        root: {
-          "--container-size": fluid
-            ? "100%"
-            : size !== undefined && size in CONTAINER_SIZES
-              ? CONTAINER_SIZES[size]
-              : rem(size),
-        },
-      }),
-    }),
-    Paper: Paper.extend({
-      defaultProps: {
-        p: "md",
-        shadow: "xl",
-        radius: "md",
-        withBorder: true,
-      },
-    }),
-
-    Card: Card.extend({
-      defaultProps: {
-        p: "xl",
-        shadow: "xl",
-        radius: "var(--mantine-radius-default)",
-        withBorder: true,
-      },
-    }),
-    Select: Select.extend({
-      defaultProps: {
-        checkIconPosition: "right",
-      },
-    }),
-  },
-  other: {
-    style: "mantine",
-  },
-});
+export default theme;
